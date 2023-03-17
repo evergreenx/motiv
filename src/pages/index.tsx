@@ -4,13 +4,18 @@ import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import { useSelector, useDispatch } from "react-redux";
 import { updateState } from "../../redux/features/testSlice";
+import useSWR from "swr";
 const inter = Inter({ subsets: ["latin"] });
-
+const fetcher = (url) => fetch(url).then((res) => res.json());
 export default function Home() {
   // const { test } = useSelector((state) => state.)
-const teststate = useSelector((state) => state.testSlice.test);
+  const teststate = useSelector((state) => state.testSlice.test);
   const dispatch = useDispatch();
 
+  const { data, error, isLoading } = useSWR(
+    "https://api.github.com/repos/vercel/swr",
+    fetcher
+  );
   const update = () => {
     dispatch(updateState("hello"));
   };
@@ -27,9 +32,9 @@ const teststate = useSelector((state) => state.testSlice.test);
       <main>
         <button onClick={update}>update</button>
 
-        {
-          teststate
-        }
+        {teststate}
+
+        <h1>{data?.name}</h1>
       </main>
     </>
   );
