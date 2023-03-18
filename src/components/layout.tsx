@@ -13,8 +13,10 @@ export default function Layout({ title, children }: LayoutProps) {
       </Head>
 
       <NavBar />
+
       <Sidebar />
-      <main>{children}</main>
+
+      <main className="bg-[#F5F5F5] absolute lg:pl-64 p-5 my-20 z-20 ">{children}</main>
     </>
   );
 }
