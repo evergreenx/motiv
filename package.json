@@ -10,6 +10,9 @@
   },
   "dependencies": {
     "@fontsource/dm-sans": "^4.5.9",
+    "@radix-ui/colors": "^0.1.8",
+    "@radix-ui/react-avatar": "^1.0.2",
+    "@radix-ui/react-menubar": "^1.0.2",
     "@radix-ui/react-popover": "1.0.5",
     "@reduxjs/toolkit": "^1.9.3",
     "@types/node": "18.15.3",

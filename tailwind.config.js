@@ -1,4 +1,8 @@
+const { blackA, violet } = require('@radix-ui/colors');
+
 /** @type {import('tailwindcss').Config} */
+
+
 module.exports = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx}",
@@ -16,7 +20,9 @@ module.exports = {
         primarypurple: "rgba(161, 98, 247, 1)",
         graydark: "rgba(124, 124, 141, 1)",
         graywhite : "rgba(255, 255, 255, 1)",
-        graydark4: "rgba(124, 124, 141, 1)"
+        graydark4: "rgba(124, 124, 141, 1)",
+        ...blackA,
+        ...violet,
       },
     },
   },
