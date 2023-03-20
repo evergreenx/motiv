@@ -5,7 +5,7 @@ import { CustomAvatar } from "../Avatar";
 
 export function NavBar() {
   return (
-    <nav className="z-40 w-full flex-row justify-between lg:pr-12 fixed flex  lg:pl-72 p-2 bg-white py-5">
+    <nav className="z-40 shadow w-full flex-row justify-between lg:pr-12 fixed flex  lg:pl-72 p-2 bg-white py-5">
       <SearchBar />
 
       <div className="nav__end flex items-center space-x-6 ">
