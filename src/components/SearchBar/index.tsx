@@ -3,7 +3,7 @@ import { SearchIcon } from "../../../data/icons";
 
 export function SearchBar() {
   return (
-    <div className="bg-[#F5F4F6] space-x-3 divide-x-2 py-3 px-[14px] w-[358px] rounded-lg flex items-center  ">
+    <div className="bg-[#F5F4F6] space-x-3 divide-x-2 py-3 px-[14px] lg:w-[358px] w-[250px] rounded-lg flex items-center  ">
       <SearchIcon />
       <input
         type="text"
